@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    counter-reset: section;
+}
+
+header {
+    background: green;
+}
+
+h1, .section_2-title h3 {
+    text-align: center;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+}
+
+.section_1 div {
+    background: yellow;
+}
+.section_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
+}
+
+section:before {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: gray;
+    text-shadow: 6px 6px 10px #707070;
+    counter-increment: section;
+    content: "Секция " counter(section);
+}
+
+.section_3 {
+    background: lightgray;
+}
+
+.section_2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_2-list {
+    flex-grow: 1;
+} 
+
+.section_2-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+    align-items: flex-start;
+    padding: 40px 40px 0 40px;
+}
+
+.section_2-list li {
+    width: 40%;
+    border: yellow solid 2px;
+    padding: 10px;
+}
+
+.section_3-table th, .section_3-table td{
+    border: black solid 1px;
+}
+
+.section_3-table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.section_3 h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+footer ul {
+    list-style: none;
+    background: gray;
+    border: 2px solid yellow;
+    flex-grow: 1;
+    width: 33%;
+}
